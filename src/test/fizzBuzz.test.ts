@@ -1,4 +1,5 @@
 import { fizzBuzz } from '../core/fizzbuzz';
+
 describe('Fizzbuzz', () => {
   const BUZZ = 'buzz';
   const FIZZ  = 'fizz'
