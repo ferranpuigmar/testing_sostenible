@@ -24,16 +24,4 @@ describe('UpperCamelCaseConverter', () => {
   it('converts the firstLetter of each word to UpperCase', () => {
     expect(upperCamelCaseConverter("foo_bar-foo")).toBe("FooBarFoo")
   })
-
-  // it('given a string with the first letter in upperCase should return the same string', () => {
-  //   expect(upperCamelCaseConverter("Foo")).toBe("Foo")
-  // })
-
-  // it('given a string that contains words with the first letter in upperCase and separated by " " should return the same words in UpperCamelCase format', () => {
-  //   expect(upperCamelCaseConverter("Foo Bar")).toBe("FooBar")
-  // })
-
-  // it('given a string that contains words with the first letter in upperCase and separated by "_" should return the same words in UpperCamelCase format', () => {
-  //   expect(upperCamelCaseConverter("Foo_Bar")).toBe("FooBar")
-  // })
 })
