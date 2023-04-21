@@ -3,18 +3,18 @@ import { FakeRecorder, FakeSensor, SurveillanceController } from "../core/survei
 
 describe('The Surveillance Controller', () => {
   it('asks the recorder to stop recording when sensor detects no motion', () => {
-    let called = false;
-    const saveCall = () => {
-      called = true;
+    let stopRecording = false;
+    const stopRecordingFakeMethod = () => {
+      stopRecording = true;
     }
     const sensor = new FakeSensor();
     const recorder = new FakeRecorder();
-    recorder.stopRecording = saveCall;
+    recorder.stopRecording = stopRecordingFakeMethod;
     const controller = new SurveillanceController(sensor, recorder);
 
     controller.recordMotion();
 
-    expect(called).toBeTruthy();
+    expect(stopRecording).toBeTruthy();
   })
 
   it('asks the recorder to start recording when sensor detects motion', () => {
